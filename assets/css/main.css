@@ -1,0 +1,16 @@
+.container {
+  @apply relative xl:max-w-[1232px] mx-auto px-4;
+}
+
+.site {
+  @apply flex flex-col w-full h-full min-h-screen overflow-hidden;
+}
+
+.main {
+  @apply flex-auto;
+}
+
+.button-outline {
+  @apply inline-flex items-center justify-center px-5 lg:py-2 rounded-[60px] border-[1.5px] border-black w-full lg:w-auto 
+  text-2xl lg:text-[40px] leading-[50px] hover:text-white hover:border-transparent hover:bg-gradient-to-r hover:from-primary hover:to-secondary;
+}
