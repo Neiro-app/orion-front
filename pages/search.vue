@@ -33,7 +33,7 @@
           </BaseInput>
         </div>
         <div class="search__button">
-          <button class="button-outline mb-3 lg:mb-0 lg:mr-[10px]" v-if="counter > 1">Пропустить</button>
+          <button class="button-outline mb-3 lg:mb-0 lg:mr-[10px]" v-if="counter > 0">Пропустить</button>
           <button class="button-outline" type="submit">Найти!</button>
         </div>
       </form>
@@ -224,7 +224,7 @@ const incrementCounter = () => {
   &__step {
     @apply relative w-[220px];
     &--white {
-      @apply p-10 rounded-[40px] text-black border-[1.5px] border-black bg-white transition-all duration-300;
+      @apply p-10 rounded-[40px] opacity-0 text-black border-[1.5px] border-black bg-white transition-all duration-300;
     }
 
     &--blue {

@@ -7,7 +7,7 @@
       width="45"
       height="36"
     />
-    <span class="text-[0]" v-if="!footerLogo">Нейро</span>
+    <span class="text-[0] lg:text-2xl" v-if="!footerLogo">Нейро</span>
     <span v-if="footerLogo">@neiro_bot</span>
   </router-link>
 </template>
@@ -27,7 +27,7 @@
     @apply inline-flex items-center text-3xl lg:text-2xl leading-[34px] font-normal text-black no-underline;
 
     &__image {
-      @apply inline-block mr-2.5;
+      @apply inline-block lg:mr-2.5;
     }
   }
 </style>
