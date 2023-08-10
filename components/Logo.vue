@@ -13,21 +13,21 @@
 </template>
 
 <script setup>
-  const props = defineProps({
-    footerLogo: {
-      type: Boolean,
-      required: false,
-      default: false,
-    },
-  });
+const props = defineProps({
+  footerLogo: {
+    type: Boolean,
+    required: false,
+    default: false,
+  },
+});
 </script>
 
 <style lang="scss" scoped>
-  .logo {
-    @apply inline-flex items-center text-3xl lg:text-2xl leading-[34px] font-normal text-black no-underline;
+.logo {
+  @apply inline-flex items-center text-3xl lg:text-2xl leading-[34px] font-normal text-black no-underline;
 
-    &__image {
-      @apply inline-block lg:mr-2.5;
-    }
+  &__image {
+    @apply inline-block lg:mr-2.5;
   }
+}
 </style>

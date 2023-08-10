@@ -1,26 +1,26 @@
 <script setup>
-  import LikeLink from "./UI/LikeLink.vue";
-  import ProfileLink from "./UI/ProfileLink.vue";
-  import BurgerMenu from "./UI/BurgerMenu.vue";
+import LikeLink from "~/components/ui/LikeLink.vue";
+import ProfileLink from "~/components/ui/ProfileLink.vue";
+import BurgerMenu from "~/components/ui/BurgerMenu.vue";
 
-  const navigation = [
-    {
-      url: "/reviews",
-      name: "Обзоры и рейтинги",
-    },
-    {
-      url: "/about",
-      name: "О нас",
-    },
-    {
-      url: "/faqs",
-      name: "Помощь",
-    },
-    {
-      url: "/contacts",
-      name: "Контакты",
-    },
-  ];
+const navigation = [
+  {
+    url: "/reviews",
+    name: "Обзоры и рейтинги",
+  },
+  {
+    url: "/about",
+    name: "О нас",
+  },
+  {
+    url: "/faqs",
+    name: "Помощь",
+  },
+  {
+    url: "/contacts",
+    name: "Контакты",
+  },
+];
 </script>
 
 <template>
@@ -60,40 +60,40 @@
 </template>
 
 <style lang="scss" scoped>
-  .header {
-    @apply py-[23px];
-    &__wrapper {
-      @apply flex items-center justify-between;
-    }
-
-    &__links {
-      @apply hidden lg:flex items-center flex-wrap;
-    }
-
-    &__navigation {
-      @apply flex items-center flex-wrap;
-    }
-
-    &__burger {
-      @apply lg:hidden;
-    }
+.header {
+  @apply py-[23px];
+  &__wrapper {
+    @apply flex items-center justify-between;
   }
 
-  .button {
-    @apply flex items-center justify-center border-none px-0 font-normal text-lg text-black no-underline leading-4 transition-all duration-300;
+  &__links {
+    @apply hidden lg:flex items-center flex-wrap;
+  }
 
-    svg {
-      @apply inline-block ml-3 w-3.5 h-3.5 stroke-black transition-all duration-300;
-    }
+  &__navigation {
+    @apply flex items-center flex-wrap;
+  }
 
-    &-primary {
-      @apply py-3 px-6 rounded-[60px] bg-[#EBFDFF] hover:text-white hover:bg-primary;
+  &__burger {
+    @apply lg:hidden;
+  }
+}
 
-      &:hover {
-        svg {
-          @apply stroke-white;
-        }
+.button {
+  @apply flex items-center justify-center border-none px-0 font-normal text-lg text-black no-underline leading-4 transition-all duration-300;
+
+  svg {
+    @apply inline-block ml-3 w-3.5 h-3.5 stroke-black transition-all duration-300;
+  }
+
+  &-primary {
+    @apply py-3 px-6 rounded-[60px] bg-[#EBFDFF] hover:text-white hover:bg-primary;
+
+    &:hover {
+      svg {
+        @apply stroke-white;
       }
     }
   }
+}
 </style>

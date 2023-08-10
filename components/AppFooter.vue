@@ -1,23 +1,30 @@
 <script setup>
-  import SocialIcon from "./UI/socialcon.vue";
+import SocialIcon from "~/components/ui/Socialcon.vue";
 
-  const icons = ["tiktok", "youtube", 'instagram', 'vk', 'facebook', 'twitter', 'telegram'];
-  let footer = ref(null);
+const icons = [
+  "tiktok",
+  "youtube",
+  "instagram",
+  "vk",
+  "facebook",
+  "twitter",
+  "telegram",
+];
+let footer = ref(null);
 
-  const { $ScrollTrigger } = useNuxtApp();
+const { $ScrollTrigger } = useNuxtApp();
 
-
-  onMounted(() => {
-    $ScrollTrigger.create({
-      trigger: footer.value,
-      markers: false,
-      start: 'top 40%',
-      onEnter: () => footer.value.classList.add("is-active"),
-      onLeave: () => footer.value.classList.remove("is-active"),
-      onEnterBack: () => footer.value.classList.add("is-active"),
-      onLeaveBack: () => footer.value.classList.remove("is-active"),
-    });
+onMounted(() => {
+  $ScrollTrigger.create({
+    trigger: footer.value,
+    markers: false,
+    start: "top 40%",
+    onEnter: () => footer.value.classList.add("is-active"),
+    onLeave: () => footer.value.classList.remove("is-active"),
+    onEnterBack: () => footer.value.classList.add("is-active"),
+    onLeaveBack: () => footer.value.classList.remove("is-active"),
   });
+});
 </script>
 
 <template>
@@ -66,22 +73,22 @@
 </template>
 
 <style lang="scss" scoped>
-  .footer {
-    @apply relative mt-auto pt-[231px] pb-[30px] overflow-hidden;
-    &__block {
-      @apply lg:max-w-[40%];
-    }
-
-    &__text {
-      @apply mt-8 lg:mt-9 font-normal text-3xl lg:text-[32px] leading-[38px] lg:leading-10 tracking-[-0.03em];
-    }
-
-    &__copyright {
-      @apply mt-[60px] lg:mt-28 text-black font-normal;
-    }
-
-    &__animation {
-      @apply relative lg:static mt-[22px] lg:mt-0 h-[384px] lg:h-auto;
-    }
+.footer {
+  @apply relative mt-auto pt-[231px] pb-[30px] overflow-hidden;
+  &__block {
+    @apply lg:max-w-[40%];
   }
+
+  &__text {
+    @apply mt-8 lg:mt-9 font-normal text-3xl lg:text-[32px] leading-[38px] lg:leading-10 tracking-[-0.03em];
+  }
+
+  &__copyright {
+    @apply mt-[60px] lg:mt-28 text-black font-normal;
+  }
+
+  &__animation {
+    @apply relative lg:static mt-[22px] lg:mt-0 h-[384px] lg:h-auto;
+  }
+}
 </style>

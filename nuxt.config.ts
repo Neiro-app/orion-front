@@ -31,9 +31,6 @@ export default defineNuxtConfig({
     },
   },
 
-  alias: {
-    "~": "./",
-  },
   css: ["assets/css/main.css"],
 
   build: {

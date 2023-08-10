@@ -14,3 +14,11 @@
   @apply inline-flex items-center justify-center px-5 lg:py-2 rounded-[60px] border-[1.5px] border-black w-full lg:w-auto 
   text-2xl lg:text-[40px] leading-[50px] hover:text-white hover:border-transparent hover:bg-gradient-to-r hover:from-primary hover:to-secondary;
 }
+
+.block-outline {
+  @apply border-[2px] border-black rounded-[60px];
+}
+
+.bg-gradient-bright {
+  background: linear-gradient(245.53deg, #11b4e1 16.38%, #02a3cf 83.65%);
+}
