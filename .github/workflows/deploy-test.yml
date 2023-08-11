@@ -26,6 +26,6 @@ jobs:
             git checkout master;
             git pull;
             echo '--- NPM OPERATIONS ---';
-            npm install
-            npm run build
-            systemctl restart neiro_front.service
+            npm install;
+            npm run build;
+            systemctl restart neiro_front.service;
