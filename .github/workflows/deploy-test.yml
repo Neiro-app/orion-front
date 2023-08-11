@@ -1,0 +1,31 @@
+name: Deploy, build and run "test"
+
+on:
+  push:
+    branches: [master]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    name: Deploy & build test
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Run command on remote server
+        uses: D3rHase/ssh-command-action@v0.2.2
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          user: ${{ secrets.SSH_USER }}
+          private_key: ${{ secrets.SSH_PRIVATE_KEY }}
+          command: |
+            echo '--- START WORK ON REMOTE SERVER ---';
+            cd ${{ secrets.PROJECT_FOLDER }};
+            echo '--- LIST OF FILES ---';
+            ls -al;
+            echo '--- GIT INFORMATION ---'
+            git checkout master;
+            git pull;
+            echo '--- NPM OPERATIONS ---';
+            npm install
+            npm run build
+            systemctl restart neiro_front.service
